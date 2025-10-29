@@ -24,7 +24,7 @@ public class WinningNumber {
     private void validate(List<Integer> winningNumbers, int bonusNumber) {
         validateNotNull(winningNumbers);
         validateWinningNumbersSize(winningNumbers);
-        validateWinningNumbersInSinglePass(winningNumbers);
+        validateWinningNumbers(winningNumbers);
         validateBonusNumberRange(bonusNumber);
         validateBonusNumberNotInWinningNumbers(winningNumbers, bonusNumber);
     }
@@ -41,7 +41,7 @@ public class WinningNumber {
         }
     }
 
-    private void validateWinningNumbersInSinglePass(List<Integer> winningNumbers) {
+    private void validateWinningNumbers(List<Integer> winningNumbers) {
         java.util.Set<Integer> uniqueNumbers = new java.util.HashSet<>();
 
         for (Integer number : winningNumbers) {
