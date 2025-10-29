@@ -1,6 +1,8 @@
 package lotto.domain;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Lotto {
 
@@ -34,7 +36,7 @@ public class Lotto {
     }
 
     private void validateNumbersInSinglePass(List<Integer> numbers) {
-        java.util.Set<Integer> uniqueNumbers = new java.util.HashSet<>();
+        Set<Integer> uniqueNumbers = new HashSet<>();
 
         for (Integer number : numbers) {
             if (number < MIN_LOTTO_NUMBER || number > MAX_LOTTO_NUMBER) {
