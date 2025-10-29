@@ -31,7 +31,7 @@ public class Lotto {
 
     private void validateSize(List<Integer> numbers) {
         if (numbers.size() != LOTTO_NUMBER_SIZE) {
-            throw new IllegalArgumentException("로또 번호는 6개여야 합니다.");
+            throw new IllegalArgumentException(String.format("로또 번호는 %d개여야 합니다.", LOTTO_NUMBER_SIZE));
         }
     }
 
@@ -40,7 +40,9 @@ public class Lotto {
 
         for (Integer number : numbers) {
             if (number < MIN_LOTTO_NUMBER || number > MAX_LOTTO_NUMBER) {
-                throw new IllegalArgumentException("로또 번호는 1부터 45 사이의 숫자여야 합니다.");
+                throw new IllegalArgumentException(
+                        String.format("로또 번호는 %d부터 %d 사이의 숫자여야 합니다.", MIN_LOTTO_NUMBER, MAX_LOTTO_NUMBER)
+                );
             }
             if (!uniqueNumbers.add(number)) {
                 throw new IllegalArgumentException("로또 번호에 중복된 숫자가 있을 수 없습니다.");
