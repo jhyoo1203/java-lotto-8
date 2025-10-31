@@ -1,8 +1,8 @@
 package lotto.application.dto.request;
 
-public record LottoPurchaseRequest(int amount) {
+import static lotto.domain.constant.LottoConstant.LOTTO_PRIZE;
 
-    private static final int LOTTO_PRICE = 1000;
+public record LottoPurchaseRequest(int amount) {
 
     public LottoPurchaseRequest {
         validate(amount);
@@ -24,7 +24,7 @@ public record LottoPurchaseRequest(int amount) {
     }
 
     private void validateDivisible(int amount) {
-        if (amount % LOTTO_PRICE != 0) {
+        if (amount % LOTTO_PRIZE != 0) {
             throw new IllegalArgumentException("구입 금액은 1,000원 단위로 입력해야 합니다.");
         }
     }

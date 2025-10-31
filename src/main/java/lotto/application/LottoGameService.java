@@ -13,9 +13,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static lotto.domain.constant.LottoConstant.LOTTO_PRIZE;
+
 public class LottoGameService {
 
-    private static final int LOTTO_PRICE = 1000;
     private static final int PERCENT = 100;
 
     private final LottoRepository lottoRepository;
@@ -81,6 +82,6 @@ public class LottoGameService {
             return 0;
         }
 
-        return (double) totalPrize * PERCENT / (lottoCount * LOTTO_PRICE);
+        return (double) totalPrize * PERCENT / (lottoCount * LOTTO_PRIZE);
     }
 }

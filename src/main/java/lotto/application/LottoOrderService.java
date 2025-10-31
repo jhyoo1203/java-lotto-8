@@ -10,12 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static lotto.domain.constant.LottoConstant.LOTTO_NUMBER_SIZE;
+import static lotto.domain.constant.LottoConstant.LOTTO_PRIZE;
 import static lotto.domain.constant.LottoConstant.MAX_LOTTO_NUMBER;
 import static lotto.domain.constant.LottoConstant.MIN_LOTTO_NUMBER;
 
 public class LottoOrderService {
-
-    private static final int LOTTO_PRIZE = 1000;
 
     private final LottoRepository lottoRepository;
 
