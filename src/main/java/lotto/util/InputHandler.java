@@ -18,6 +18,7 @@ public final class InputHandler {
                 System.out.println(ERROR_PREFIX + e.getMessage());
             } catch (Exception e) {
                 System.out.println(ERROR_PREFIX + "알 수 없는 오류가 발생했습니다.");
+                throw e;
             }
         }
     }
