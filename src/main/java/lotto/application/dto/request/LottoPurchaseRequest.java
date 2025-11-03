@@ -34,7 +34,7 @@ public record LottoPurchaseRequest(int amount) {
 
     private void validateDivisible(int amount) {
         if (amount % LOTTO_PRIZE != 0) {
-            throw new IllegalArgumentException("구입 금액은 1,000원 단위로 입력해야 합니다.");
+            throw new IllegalArgumentException(String.format("구입 금액은 %d원 단위여야 합니다.", LOTTO_PRIZE));
         }
     }
 }
